@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class DemoController {  
     @RequestMapping("/welcome")  
     public ModelAndView welcome() {  
-        String message = "Welcome to Speedops";  
+        String message = "Welcome all to Speedops";  
         return new ModelAndView("hellopage", "message", message);  
     }  
 }  
