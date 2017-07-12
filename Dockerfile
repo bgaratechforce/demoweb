@@ -1,4 +1,5 @@
-FROM tomcat:8.5
+FROM tomcat:8 
  
-COPY /target/demoapp.war webapps/ROOT.war 
+RUN ["rm", "-fr", "/usr/local/tomcat/webapps/ROOT"]
+COPY target/demoapp.war /usr/local/tomcat/webapps/ROOT.war
 CMD ["bin/catalina.sh", "run"]
